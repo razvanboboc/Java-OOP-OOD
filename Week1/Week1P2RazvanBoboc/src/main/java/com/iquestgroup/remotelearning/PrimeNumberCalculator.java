@@ -2,7 +2,7 @@ package com.iquestgroup.remotelearning;
 
 public class PrimeNumberCalculator {
 
-    public void start(int upperBound) {
+    public void calculatePrimeNumbers(int upperBound) {
 
         boolean primes[] = new boolean[upperBound + 1];
 
