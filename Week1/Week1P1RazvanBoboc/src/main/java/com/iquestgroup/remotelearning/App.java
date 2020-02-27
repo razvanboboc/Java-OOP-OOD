@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class App {
     public void start() throws IOException {
-        PersonSets personsets = new PersonSets();
-        personsets.inputPersons();
-        personsets.outputPersons();
+        PersonProcessor personProcessor = new PersonProcessor();
+        personProcessor.processPersons();
+        personProcessor.printPersonsInformation();
 
     }
     public static void main (String[] args) throws IOException {
