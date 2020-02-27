@@ -5,7 +5,7 @@ public class App
 
     public static void main(String[] args) {
 
-        PrimeNumbers primeNumbers = new PrimeNumbers();
-        primeNumbers.start(Integer.parseInt(args[0]));
+        PrimeNumberCalculator primeNumberCalculator = new PrimeNumberCalculator();
+        primeNumberCalculator.start(Integer.parseInt(args[0]));
     }
 }

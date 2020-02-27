@@ -1,6 +1,6 @@
 package com.iquestgroup.remotelearning;
 
-public class PrimeNumbers {
+public class PrimeNumberCalculator {
 
     public void start(int upperBound) {
 
