@@ -6,7 +6,7 @@ public class App {
         ConnectionManager.Connection connection;
         int i = 0;
         while(true) {
-            connection = connectionManager.getConnection(i);
+            connection = connectionManager.getConnection();
             System.out.println("Connection no. " + connection.getConnectionID() + " has been consumed");
 
             i++;
