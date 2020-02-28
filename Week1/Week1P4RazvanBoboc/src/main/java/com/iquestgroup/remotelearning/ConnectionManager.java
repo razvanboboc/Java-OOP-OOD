@@ -2,6 +2,7 @@ package com.iquestgroup.remotelearning;
 
 public class ConnectionManager {
     private int numberOfConnections = 11;
+    private int ocuppiedConnections = 0;
     private Connection[] connectionsArray = new Connection[numberOfConnections];
 
     public ConnectionManager() {
@@ -28,12 +29,15 @@ public class ConnectionManager {
 
     }
 
-    public Connection getConnection(int i) {
-        if (i == numberOfConnections) {
+    public Connection getConnection() {
+
+        if (ocuppiedConnections > numberOfConnections - 1) {
             System.out.println("The connection manager has run out of connections");
             return null;
         }
-        return connectionsArray[i];
+
+        return connectionsArray[ocuppiedConnections++];
+
     }
 
 }

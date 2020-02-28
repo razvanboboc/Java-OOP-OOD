@@ -11,16 +11,8 @@ public class Tank {
         stack = new Stack<Object>();
     }
 
-    public boolean isNotEmpty() {
-        if (stack.size() != 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public void popElementsFromTank() {
-        while (isNotEmpty()) {
+        while (stack.size() != 0) {
             Object poppedElement = stack.pop();
             System.out.println("The element " + poppedElement + " was popped");
         }
@@ -38,13 +30,13 @@ public class Tank {
 
     @Override
     public void finalize() {
-        if (isNotEmpty()) {
+        if (stack.size() != 0) {
             System.out.println(
-                    "The tank is not empty, we must dispose of the elements before calling the garbage collector");
+                    "The tank is not empty, the elements will be removed, so that the garbage collector can begin its execution");
             stack.removeAllElements();
-            System.out.println("The garbage collector is being called");
+            System.out.println("The garbage collector can begin its execution");
         } else {
-            System.out.println("The tank is empty, the garbage collector is being called");
+            System.out.println("The tank is empty, the garbage collector can begin its execution");
         }
     }
 }
