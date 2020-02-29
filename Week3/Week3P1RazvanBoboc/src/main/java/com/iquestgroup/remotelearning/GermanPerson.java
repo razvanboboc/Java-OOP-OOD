@@ -2,28 +2,24 @@ package com.iquestgroup.remotelearning;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class GermanPerson extends Person {
 
     public GermanPerson(String firstName, String surName, String dateOfBirth) {
-        super(firstName, surName);
-        LocalDate birthDate = getBirthDate(dateOfBirth);
-        setBirthDate(birthDate);
-        selfDescribe();
+        super(firstName, surName, dateOfBirth);
     }
 
     public GermanPerson(String fullName, String dateOfBirth) {
-        super(fullName);
-        LocalDate birthDate = getBirthDate(dateOfBirth);
-        setBirthDate(birthDate);
-        selfDescribe();
+        super(fullName, dateOfBirth);
     }
 
-
     @Override
-    public LocalDate getBirthDate(String dateOfBirth) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        return LocalDate.parse(dateOfBirth, formatter);
+    public String getBirthDate(){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/dd/MM");
+        LocalDate germanBirthDate = LocalDate.parse(dateOfBirth, formatter);
+        String birthDateGermanFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ENGLISH).format(germanBirthDate);
+        return birthDateGermanFormat;
     }
 
     @Override
