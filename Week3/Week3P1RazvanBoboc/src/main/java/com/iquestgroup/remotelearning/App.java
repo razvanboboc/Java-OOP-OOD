@@ -7,11 +7,6 @@ public class App {
 
         englishPerson.selfDescribe();
         germanPerson.selfDescribe();
-
-        System.out.println("The birthdate of " + englishPerson.getFirstName() + " " + englishPerson.getSurName() +
-                " in English format is " + englishPerson.getBirthDate());
-        System.out.println("The birthdate of " + germanPerson.getFirstName() + " " + germanPerson.getSurName() +
-                " in German format is " + germanPerson.getBirthDate());
     }
 }
 

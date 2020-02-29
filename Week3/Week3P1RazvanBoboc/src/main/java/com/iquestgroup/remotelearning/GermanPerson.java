@@ -25,7 +25,7 @@ public class GermanPerson extends Person {
     @Override
     public void selfDescribe() {
         System.out.println("Hallo, meine Name ist " + getFirstName() + " " + getSurName() + " und ich bin " + calculateAge()
-                + " Jahre alt");
+                + " Jahre alt und mein Geburtsdatum im deutschen Format ist " + getBirthDate());
 
     }
 

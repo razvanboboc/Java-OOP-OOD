@@ -25,7 +25,7 @@ public class EnglishPerson extends Person {
     @Override
     public void selfDescribe() {
         System.out.println("Hello, my name is " + getFirstName() + " " + getSurName() + " and I am " + calculateAge()
-                + " years old");
+                + " years old and my birth date in English Format is " +  getBirthDate());
 
     }
 
