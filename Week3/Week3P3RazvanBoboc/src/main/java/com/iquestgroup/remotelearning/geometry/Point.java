@@ -1,4 +1,4 @@
-package geometry;
+package com.iquestgroup.remotelearning.geometry;
 
 public class Point extends GeometricShape {
 

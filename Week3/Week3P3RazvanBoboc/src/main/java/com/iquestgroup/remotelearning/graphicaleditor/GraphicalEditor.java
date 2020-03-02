@@ -1,6 +1,6 @@
-package graphicaleditor;
+package com.iquestgroup.remotelearning.graphicaleditor;
 
-import geometry.Canvas;
+import com.iquestgroup.remotelearning.geometry.Canvas;
 
 public class GraphicalEditor {
 

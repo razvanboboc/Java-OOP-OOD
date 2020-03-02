@@ -1,4 +1,4 @@
-package geometry;
+package com.iquestgroup.remotelearning.geometry;
 
 import java.util.ArrayList;
 

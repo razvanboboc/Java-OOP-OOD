@@ -1,4 +1,4 @@
-package geometry;
+package com.iquestgroup.remotelearning.geometry;
 
 public class Rectangle extends GeometricShape {
     private Point downLeftCorner;

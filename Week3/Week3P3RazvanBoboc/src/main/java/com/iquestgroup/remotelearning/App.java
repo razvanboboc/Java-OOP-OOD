@@ -1,10 +1,10 @@
 package com.iquestgroup.remotelearning;
-import geometry.Canvas;
-import geometry.Circle;
-import geometry.Line;
-import geometry.Point;
-import geometry.Rectangle;
-import graphicaleditor.GraphicalEditor;
+import com.iquestgroup.remotelearning.geometry.Canvas;
+import com.iquestgroup.remotelearning.geometry.Circle;
+import com.iquestgroup.remotelearning.geometry.Line;
+import com.iquestgroup.remotelearning.geometry.Point;
+import com.iquestgroup.remotelearning.geometry.Rectangle;
+import com.iquestgroup.remotelearning.graphicaleditor.GraphicalEditor;
 
 public class App {
 
