@@ -2,29 +2,17 @@ package geometry;
 
 public class Line extends GeometricShape {
 
-    private Point coordinateX;
-    private Point coordinateY;
-    private Integer thicknessParameter;
+    private Point firstPoint;
+    private Point secondPoint;
 
-    public Line(Point coordinateX, Point coordinateY) {
-        this.coordinateY = coordinateY;
-        this.coordinateX = coordinateX;
-        this.getListOfPoints().add(coordinateX);
-        this.getListOfPoints().add(coordinateY);
+    public Line(Point firstPoint, Point secondPoint) {
+        this.firstPoint = firstPoint;
+        this.secondPoint = secondPoint;
     }
 
-    @Override
-    public void changeShapeThickness(Integer thicknessParameter) {
-        this.thicknessParameter = thicknessParameter;
-
+    public void draw(){
+        System.out.println("This is the line defined by the points (" + firstPoint.getXCoordinate() + ", " + firstPoint.getYCoordinate() +
+                ") and (" + secondPoint.getXCoordinate() + ", " + secondPoint.getYCoordinate() + ")");
     }
-    @Override
-    public void getShapeThickness() {
-        System.out.println("Line");
-        System.out.println("The thickness parameter is " + thicknessParameter + "px");
-    }
-
-
-
 }
 

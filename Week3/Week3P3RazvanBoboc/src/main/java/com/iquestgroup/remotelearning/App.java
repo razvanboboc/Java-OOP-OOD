@@ -10,32 +10,41 @@ public class App {
 
     public static void main(String[] args) {
 
-        Point coordinateX = new Point(-10, 10);
-        Point coordinateY = new Point(10, 10);
+        Point firstPoint = new Point(-10, 10);
+        Point secondPoint = new Point(10, 10);
 
-        Line line = new Line(coordinateX, coordinateY);
+        Line line = new Line(firstPoint, secondPoint);
 
-        Circle circle = new Circle(line);
+        Point circleCentre = new Point(5, 5);
+        Circle circle = new Circle(5, circleCentre);
 
-        Rectangle rectangle = new Rectangle();
+        Point downLeftCorner = new Point(0, 0);
+        Point downRightCorner = new Point(0, 4);
+        Point upLeftCorner = new Point(4, 0);
+        Point upRightCorner = new Point(4, 4);
+
+        Rectangle rectangle = new Rectangle(downLeftCorner, downRightCorner, upLeftCorner, upRightCorner);
 
         Canvas primaryCanvas = new Canvas();
         Canvas secondaryCanvas = new Canvas();
+        primaryCanvas.draw();
 
-        primaryCanvas.addShapeIntoCanvas(coordinateY);
+        primaryCanvas.addShapeIntoCanvas(firstPoint);
+        primaryCanvas.addShapeIntoCanvas(secondPoint);
         primaryCanvas.addShapeIntoCanvas(line);
+
+        primaryCanvas.addShapeIntoCanvas(circleCentre);
         primaryCanvas.addShapeIntoCanvas(circle);
+
+        primaryCanvas.addShapeIntoCanvas(downLeftCorner);
+        primaryCanvas.addShapeIntoCanvas(downRightCorner);
+        primaryCanvas.addShapeIntoCanvas(upLeftCorner);
+        primaryCanvas.addShapeIntoCanvas(upRightCorner);
         primaryCanvas.addShapeIntoCanvas(rectangle);
+
         primaryCanvas.addShapeIntoCanvas(secondaryCanvas);
 
-        coordinateY.changeShapeThickness(3);
-        line.changeShapeThickness(2);
-        circle.changeShapeThickness(5);
-        rectangle.changeShapeThickness(7);
-        secondaryCanvas.changeShapeThickness(8);
-
         GraphicalEditor editor = new GraphicalEditor(primaryCanvas);
-        editor.getCanvas().printColorsOfShapesFromCanvas();
 
     }
 
