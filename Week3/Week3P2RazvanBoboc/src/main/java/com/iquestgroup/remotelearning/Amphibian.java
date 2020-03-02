@@ -1,7 +1,7 @@
 package com.iquestgroup.remotelearning;
 
 public class Amphibian {
-    private String speciesType;
+    protected String speciesType;
     public Amphibian(String speciesType) {
         this.speciesType = speciesType;
     }
@@ -15,10 +15,14 @@ public class Amphibian {
     }
 
     public void jump() {
-        System.out.println("Jumping..");
+        System.out.println("The amphibian is jumping");
     }
 
     public void eat() {
-        System.out.println("Eating..");
+        System.out.println("The amphibian is eating");
+    }
+
+    protected void swim() {
+        System.out.println("The amphibian is swimming");
     }
 }

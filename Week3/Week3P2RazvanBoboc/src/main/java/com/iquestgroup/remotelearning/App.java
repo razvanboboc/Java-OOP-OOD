@@ -2,20 +2,17 @@ package com.iquestgroup.remotelearning;
 
 public class App {
     public static void main(String[] args) {
-        Frog frog = new Frog("Woodfrog");
-        Amphibian amphibian = (Amphibian) frog;
+        Amphibian amphibian = new Amphibian("AmphibianX");
+        Amphibian frog = new Frog("Bullfrog");
 
-        amphibian.eat();
         amphibian.jump();
+        amphibian.eat();
 
         frog.eat();
         frog.jump();
 
-        amphibian.getSpeciesType();
-        amphibian.setSpeciesType("American Bullfrog");
-
-        amphibian.getSpeciesType();
-        frog.getSpeciesType();
+        frog.swim();
+        amphibian.swim();
 
     }
 }
