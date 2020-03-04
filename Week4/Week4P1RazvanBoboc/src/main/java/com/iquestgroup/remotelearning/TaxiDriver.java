@@ -1,8 +1,9 @@
 package com.iquestgroup.remotelearning;
 
 import com.iquestgroup.remotelearning.interfaces.Driver;
+import com.iquestgroup.remotelearning.interfaces.Human;
 
-public class TaxiDriver implements Driver {
+public class TaxiDriver implements Human, Driver {
 
     private String name;
 

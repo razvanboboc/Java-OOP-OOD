@@ -1,10 +1,11 @@
 package com.iquestgroup.remotelearning;
 
 import com.iquestgroup.remotelearning.interfaces.Dispatcher;
+import com.iquestgroup.remotelearning.interfaces.Human;
 
 import java.util.List;
 
-public class DispatchOperator implements Dispatcher {
+public class DispatchOperator implements Human, Dispatcher {
 
     private String name;
     private List<TaxiDriver> drivers;
@@ -16,6 +17,10 @@ public class DispatchOperator implements Dispatcher {
 
     public void eat() {
         System.out.println("Operator " + name + " eats");
+    }
+
+    public void sleep() {
+        System.out.println("Operator " + name + " sleeps");
     }
 
     private TaxiDriver getBestAvailableTaxi(String location) {

@@ -1,5 +1,5 @@
 package com.iquestgroup.remotelearning.interfaces;
 
-public interface Dispatcher extends Employee {
+public interface Dispatcher {
     void dispatch(String location);
 }

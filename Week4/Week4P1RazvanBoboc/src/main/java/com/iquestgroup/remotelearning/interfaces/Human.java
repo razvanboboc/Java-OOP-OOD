@@ -1,5 +1,6 @@
 package com.iquestgroup.remotelearning.interfaces;
 
-public interface Employee {
+public interface Human {
    void eat();
+   void sleep();
 }
