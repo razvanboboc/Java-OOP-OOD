@@ -15,7 +15,15 @@ public class PlayList {
 		listOfSongs.add(song);
 	}
 
-	public String getSong(){
+	public String getSongName(){
 		return listOfSongs.get(listOfSongs.size() - 1).getSongName();
+	}
+
+	public String getBandName(){
+		return listOfSongs.get(listOfSongs.size() - 1).getBandName();
+	}
+
+	public List getPlaylist(){
+		return listOfSongs;
 	}
 }

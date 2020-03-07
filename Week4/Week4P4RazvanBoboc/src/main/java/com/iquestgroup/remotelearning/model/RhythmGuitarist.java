@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning;
+package com.iquestgroup.remotelearning.model;
 
 import com.iquestgroup.remotelearning.interfaces.Guitarist;
 

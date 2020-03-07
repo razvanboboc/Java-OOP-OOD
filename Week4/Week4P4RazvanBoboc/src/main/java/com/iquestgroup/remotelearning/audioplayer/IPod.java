@@ -12,7 +12,8 @@ public class IPod implements MusicPlayer {
 	}
 	
 	public void playMusic() {
-		System.out.println("IPod plays music");
+		System.out.println("IPod plays " + playList.getSongName() + " performed by "
+				+ playList.getBandName());
 	}
 
 }

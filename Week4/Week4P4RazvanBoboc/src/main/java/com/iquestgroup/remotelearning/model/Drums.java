@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning;
+package com.iquestgroup.remotelearning.model;
 
 public class Drums {
 

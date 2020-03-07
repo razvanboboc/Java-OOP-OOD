@@ -1,4 +1,4 @@
-package com.iquestgroup.remotelearning;
+package com.iquestgroup.remotelearning.model;
 
 
 import com.iquestgroup.remotelearning.interfaces.Drummer;
@@ -16,8 +16,12 @@ public class Band {
 		this.guitarist = guitarist;
 	}
 
+	public String getBandName(){
+		return bandName;
+	}
+
 	public void performConcert() {
-		System.out.println("Band performs a concert");
+		System.out.println("The Band named " + bandName +" performs a concert");
 	}
 
 }
