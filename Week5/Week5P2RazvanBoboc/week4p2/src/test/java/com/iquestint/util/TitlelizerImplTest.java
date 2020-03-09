@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class TitlelizerImplTest {
-    String[] wordsToIgnoreList = new String[]{"the", "a", "to", "in", "of"};
+    String[] wordsToIgnoreList = new String[]{"the", "a", "to", "in", "of", "is"};
     private TitlelizeOperator titlelizer;
 
     @Before

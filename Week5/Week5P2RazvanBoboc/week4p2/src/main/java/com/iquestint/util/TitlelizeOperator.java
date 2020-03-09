@@ -1,6 +1,5 @@
 package com.iquestint.util;
 
-
 import java.util.StringJoiner;
 
 public class TitlelizeOperator implements Titlelizer {
@@ -8,15 +7,23 @@ public class TitlelizeOperator implements Titlelizer {
     String stringToBeTitlelized;
     String[] arrayToBeTitlelized;
     String[] wordsToIgnoreList;
+
     public TitlelizeOperator(String[] wordsToIgnoreList) {
         this.wordsToIgnoreList = wordsToIgnoreList;
     }
-//    String[] wordsToIgnoreList = new String[]{"the", "a", "to", "in", "of"};
-
 
     public String titlelize(String toTitlelize) {
+        if(toTitlelize == ""){
+            return "";
+        }
+
+        if((toTitlelize == null) || (toTitlelize == " ")){
+            throw new IllegalArgumentException();
+        }
+
         stringToBeTitlelized = toTitlelize;
         arrayToBeTitlelized = stringToBeTitlelized.split(" ");
+
         for (int wordToBeTitlelized = 0; wordToBeTitlelized < arrayToBeTitlelized.length; wordToBeTitlelized++) {
 
             for (String wordToBeIgnored : wordsToIgnoreList) {
