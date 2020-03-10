@@ -43,7 +43,7 @@ public class StringList implements List<String> {
                 indexer++;
                 currentListSize++;
             } catch (NumberFormatException e) {
-                throw new InvalidNumberFormatException("The number is invalid.");
+                throw new InvalidNumberFormatException();
             }
         }
 
