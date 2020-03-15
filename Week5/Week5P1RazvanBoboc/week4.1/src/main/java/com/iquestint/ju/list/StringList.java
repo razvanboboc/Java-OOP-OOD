@@ -35,11 +35,11 @@ public class StringList implements List<String> {
             indexer++;
             currentListSize++;
         } else if (element == null) {
-            throw new NullOrEmptyException("The element is null");
+            throw new NullOrEmptyException();
         } else {
             try {
                 integerArray[indexer] = Integer.parseInt(element);
-                operationsHistory.add("The element" + element + " was added in position" + indexer);
+                operationsHistory.add("The element" + element + " was added in position " + indexer);
                 indexer++;
                 currentListSize++;
             } catch (NumberFormatException e) {
@@ -52,7 +52,7 @@ public class StringList implements List<String> {
     @Override
     public String get(int position) {
         if (position >= currentListSize) {
-            throw new OutOfBoundsException("Index out of bounds.");
+            throw new OutOfBoundsException();
         }
         return String.valueOf(integerArray[position]);
     }
