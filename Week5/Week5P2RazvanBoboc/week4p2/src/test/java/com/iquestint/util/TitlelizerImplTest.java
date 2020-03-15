@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class TitlelizerImplTest {
-    String[] wordsToIgnoreList = new String[]{"the", "a", "to", "in", "of", "is"};
+    String[] wordsToIgnoreList = new String[]{"the", "a", "to", "in", "of"};
     private TitlelizeOperator titlelizer;
 
     @Before
@@ -44,7 +44,7 @@ public class TitlelizerImplTest {
         String actualResult = titlelizer.titlelize("This String is Titlelized");
 
         //THEN
-        assertThat(actualResult, is("This String is Titlelized"));
+        assertThat(actualResult, is("This String Is Titlelized"));
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TitlelizerImplTest {
         String actualResult = titlelizer.titlelize("this String is Titlelized");
 
         //THEN
-        assertThat(actualResult, is("This String is Titlelized"));
+        assertThat(actualResult, is("This String Is Titlelized"));
     }
 
     @Test

@@ -1,11 +1,8 @@
 package com.iquestint.util;
 
-import java.util.StringJoiner;
-
 public class TitlelizeOperator implements Titlelizer {
 
-    String stringToBeTitlelized;
-    String[] arrayToBeTitlelized;
+    String[] arrayToTitlelize;
     String[] wordsToIgnoreList;
 
     public TitlelizeOperator(String[] wordsToIgnoreList) {
@@ -21,34 +18,30 @@ public class TitlelizeOperator implements Titlelizer {
             throw new IllegalArgumentException();
         }
 
-        stringToBeTitlelized = toTitlelize;
-        arrayToBeTitlelized = stringToBeTitlelized.split(" ");
+        arrayToTitlelize = toTitlelize.split(" ");
 
-        for (int wordToBeTitlelized = 0; wordToBeTitlelized < arrayToBeTitlelized.length; wordToBeTitlelized++) {
-
-            for (String wordToBeIgnored : wordsToIgnoreList) {
-                String currentWordLowerCased = arrayToBeTitlelized[wordToBeTitlelized].toLowerCase();
-                if (currentWordLowerCased.equals(wordToBeIgnored)) {
-                    arrayToBeTitlelized[wordToBeTitlelized] = currentWordLowerCased;
-                    wordToBeTitlelized++;
-                }
-
-            }
-            arrayToBeTitlelized[wordToBeTitlelized] = arrayToBeTitlelized[wordToBeTitlelized].toLowerCase();
-            StringBuilder capitalizedWord = new StringBuilder(arrayToBeTitlelized[wordToBeTitlelized]);
-            char characterToBeUppercased = arrayToBeTitlelized[wordToBeTitlelized].charAt(0);
-            int firstCharacterAsciiValue = characterToBeUppercased;
-            int uppercasedCharacter = firstCharacterAsciiValue - 32;
-            characterToBeUppercased = (char) uppercasedCharacter;
-            capitalizedWord.setCharAt(0, characterToBeUppercased);
-
-            arrayToBeTitlelized[wordToBeTitlelized] = capitalizedWord.toString();
+        for (int wordToCapitalize = 0; wordToCapitalize < arrayToTitlelize.length; wordToCapitalize++) {
+           arrayToTitlelize[wordToCapitalize] = capitalize(arrayToTitlelize[wordToCapitalize]);
         }
-        StringJoiner joiner = new StringJoiner(" ");
-        for (int wordToBeTitlelized = 0; wordToBeTitlelized < arrayToBeTitlelized.length; wordToBeTitlelized++) {
-            joiner.add(arrayToBeTitlelized[wordToBeTitlelized]);
+
+        toTitlelize = String.join(" ", arrayToTitlelize);
+
+        return toTitlelize;
+    }
+
+    public boolean isCapitalizable(String wordToBeCapitalized){
+        for (String wordToBeIgnored : wordsToIgnoreList){
+            if(wordToBeCapitalized == wordToBeIgnored)
+                return false;
         }
-        return joiner.toString();
+        return true;
+    }
+
+    public String capitalize(String word){
+        if(isCapitalizable(word)){
+            return word.substring(0,1).toUpperCase() + word.substring(1);
+        }
+        return word;
     }
 
 }

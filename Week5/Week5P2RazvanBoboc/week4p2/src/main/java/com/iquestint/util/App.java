@@ -2,7 +2,7 @@ package com.iquestint.util;
 
 public class App {
     public static void main(String[] args){
-        String[] wordsToIgnoreList = new String[]{"the", "a", "to", "in", "of", "is"};
+        String[] wordsToIgnoreList = new String[]{"the", "a", "to", "in", "of"};
         String initialString = "NoW is tHe time To act!";
         String titlelizedString;
 
